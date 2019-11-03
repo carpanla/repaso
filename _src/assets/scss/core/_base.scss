@@ -9,12 +9,13 @@ body{
 .wrapper{
     box-sizing: border-box;
     min-height: 100vh;
+    padding: 20px;
 }
 .header{
     border-bottom: 1px solid $cool-grey;
 
     & .image{
-        background: url('../images/windows-bg.jpg');
+        background: url('../images/windows.jpg');
         width: 150px;
         height: 75px;
         background-size: cover;
@@ -25,3 +26,51 @@ body{
         text-align: center;
     }
 }
+.aside {
+    display: flex;
+    &.author,.info{
+    flex-basis: 50%;
+    }
+}
+.info{
+    & .steve{
+        border-radius: 100%;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        img{
+            border-style: none;
+            width: 140%;
+            transform: translateX(-46px);
+        }
+    }
+}
+.footer{
+    border-top: 1px solid $cool-grey;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+/*MEDIA QUERYS*/
+
+
+ @media all and (min-width:768px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap:20px;
+        border-left: 50px solid $cool-grey;
+    }
+    .right{
+        grid-column: span 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .left{
+        grid-column: span 3;
+    }
+    .footer{
+        grid-column: span 4;
+    }
+}
+
+
