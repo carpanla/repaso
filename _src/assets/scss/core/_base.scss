@@ -1,0 +1,28 @@
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: $font-text;
+    color:black;
+}
+.wrapper{
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+.header{
+    border-bottom: 1px solid $cool-grey;
+
+    & .image{
+        background-color: transparent;
+        background: url('../images/windows-bg.jpg');
+        width: 150px;
+        height: 75px;
+        background-size: cover;
+        background-position: center;
+        margin: auto;
+    }
+    & .title{
+        text-align: center;
+    }
+}
